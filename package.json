@@ -3,13 +3,18 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "next"
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
   },
   "repository": "git@github.com:khamiltonuk/KristianKreativeKode.git",
   "author": "n",
   "license": "y",
   "private": false,
   "devDependencies": {
+    "gray-matter": "^4.0.2",
+    "js-yaml": "^4.0.0",
+    "marked": "^1.2.7",
     "raw-loader": "^4.0.2"
   },
   "dependencies": {
