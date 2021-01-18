@@ -1,0 +1,12 @@
+{
+  "name": "KristianKreativeKode",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next"
+  },
+  "repository": "git@github.com:khamiltonuk/KristianKreativeKode.git",
+  "author": "n",
+  "license": "y",
+  "private": false
+}
