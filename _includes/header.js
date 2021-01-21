@@ -1,7 +1,7 @@
 export default function Header() {
   return (
     <header>
-      <p>Blog | powered by Next.js</p>
+      <h1>Hi! I'm Kristian</h1>
     </header>
   );
 }

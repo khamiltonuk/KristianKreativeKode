@@ -27,6 +27,9 @@ export default function Blog(props) {
           </li>
         ))}
       </ul>
+      <Link href="/about">
+        <a>About</a>
+      </Link>
     </DefaultLayout>
   );
 }
