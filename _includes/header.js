@@ -1,7 +1,13 @@
+import Link from "next/link";
+
 export default function Header() {
   return (
     <header>
-      <h1>Hi! I'm Kristian</h1>
+      <Link href="/">
+        <a>
+          <h1>Hi! I'm Kristian</h1>
+        </a>
+      </Link>
     </header>
   );
 }

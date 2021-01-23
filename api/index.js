@@ -1,6 +1,7 @@
 import matter from "gray-matter";
 import yaml from "js-yaml";
 import marked from "marked";
+import { format } from "date-fns";
 
 export async function getAllPosts() {
   const context = require.context("../_posts", false, /\.md$/);
@@ -13,6 +14,8 @@ export async function getAllPosts() {
     posts.push({
       slug: post.replace(".md", ""),
       title: meta.data.title,
+      date: format(new Date(meta.data.date), "dd/MM/yyyy"),
+      description: meta.data.description,
     });
   }
   return posts;
@@ -23,7 +26,7 @@ export async function getPostBySlug(slug) {
   const meta = matter(fileContent.default);
   const content = marked(meta.content);
   return {
-    title: meta.data.title,
+    title: `${meta.data.title}`,
     content: content,
   };
 }
