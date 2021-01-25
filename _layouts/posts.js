@@ -13,7 +13,7 @@ export default function PostLayout(props) {
         <div dangerouslySetInnerHTML={{ __html: props.content }} />
         <div>
           <Link href="/">
-            <a>Home</a>
+            <a>Back home</a>
           </Link>
         </div>
       </article>

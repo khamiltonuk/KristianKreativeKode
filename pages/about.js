@@ -7,7 +7,7 @@ export default function () {
       <h2>About me</h2>
       <p>I am a software engineer from london, currently living in Berlin</p>
       <p>
-        <a href="https://twitter.com/khamiltonuk">twitter</a>
+        I Organise and coach at <a href="https://codebar.io/">codebar</a>
       </p>
       <Link href="/">
         <a>Home</a>

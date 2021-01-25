@@ -8,6 +8,9 @@ export default function Header() {
           <h1>Hi! I'm Kristian</h1>
         </a>
       </Link>
+      <Link href="/about">
+        <a>About me</a>
+      </Link>
     </header>
   );
 }
