@@ -17,7 +17,7 @@ export async function getStaticProps() {
 export default function Blog(props) {
   return (
     <DefaultLayout title={props.title} description={props.description}>
-      <ul>
+      <ul className="blog-posts">
         {props.posts.map((post, idx) => {
           return (
             <li key={idx}>
@@ -27,8 +27,10 @@ export default function Blog(props) {
               <p>{post.description}</p>
               <p>{post.date}</p>
               <p>
-                {post.tags.map((tag) => (
-                  <span>{tag.replace("-", " ")}</span>
+                {post.tags.map((tag, index) => (
+                  <span className="tag" key={index}>
+                    {tag.replace("-", " ")}
+                  </span>
                 ))}
               </p>
             </li>

@@ -2,6 +2,7 @@ import DefaultLayout from "@layouts/default";
 import Head from "next/head";
 import ReactMarkdown from "react-markdown";
 import Image from "next/image";
+import Link from "next/link";
 import markdownStyles from "./markdown-styles.module.css";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 
@@ -34,6 +35,9 @@ export default function PostLayout(props) {
           renderers={renderers}
         />
       </article>
+      <Link href="/">
+        <a>Back home</a>
+      </Link>
     </DefaultLayout>
   );
 }

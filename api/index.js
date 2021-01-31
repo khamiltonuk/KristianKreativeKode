@@ -13,7 +13,7 @@ export async function getAllPosts() {
     posts.push({
       slug: post.replace(".md", ""),
       title: meta.data.title,
-      tags: meta.data.tag.split(" "),
+      tags: meta.data.tag.split(" ") || [],
       date: format(new Date(meta.data.date), "dd/MM/yyyy"),
       description: meta.data.description,
     });

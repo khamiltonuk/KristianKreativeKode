@@ -1,3 +1,79 @@
+:root {
+  --Flavour-1-hex: #d9b504;
+  --Flavour-2-hex: #f29f05;
+  --Flavour-3-hex: #d97904;
+  --Flavour-4-hex: #bf0404;
+  --Flavour-5-hex: #730202;
+}
+
 body {
   background: #f1f1f1;
+  color: #222;
+  font-family: "Open Sans", sans-serif;
+}
+
+h1,
+h2 {
+  font-family: "Yusei Magic", sans-serif;
+}
+
+.tag {
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-right: 10px;
+  background-color: var(--Flavour-2-hex);
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 70%;
+}
+
+a,
+a:visited {
+  color: var(--Flavour-4-hex);
+  text-decoration: none;
+}
+
+a:hover,
+a:active,
+a:focus {
+  color: var(--Flavour-5-hex);
+}
+
+a:hover svg,
+a:focus svg {
+  fill: var(--Flavour-5-hex);
+}
+
+.blog-posts {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.blog-posts li {
+  margin-bottom: 40px;
+}
+
+/* header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* footer */
+footer {
+  margin-top: 100px;
+}
+
+.social-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+.social-links ul li {
+  padding: 0;
+  margin: 0 20px 0 0;
 }
