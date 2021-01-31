@@ -70,13 +70,13 @@ function draw() {
 }
 
 class Ring {
-  constructor(x, y, r) {
+  constructor(x, y, radius) {
     this.x = x;
     this.y = y;
-    this.r = r;
+    this.radius = radius;
   }
   draw() {
-    circle(this.x, this.y, this.r);
+    circle(this.x, this.y, this.radius);
   }
 }
 ```

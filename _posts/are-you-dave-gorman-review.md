@@ -1,6 +1,6 @@
 ---
 title: A book review of Are You Dave Gorman By Danny Wallace
-description: A review of my all time favourite book, I revisit it for the first time in 15 years
+description: A review of my all time favourite book, I revisit the book for the first time in 15 years
 tag: book-review comedy
 date: 2021-01-31
 ---
