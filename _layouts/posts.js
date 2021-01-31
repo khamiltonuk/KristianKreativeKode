@@ -1,6 +1,24 @@
 import DefaultLayout from "@layouts/default";
 import Head from "next/head";
-import Link from "next/link";
+import ReactMarkdown from "react-markdown";
+import Image from "next/image";
+import markdownStyles from "./markdown-styles.module.css";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+
+const renderers = {
+  code: ({ language, value }) => {
+    return <SyntaxHighlighter language={language} children={value} />;
+  },
+  paragraph: (paragraph) => {
+    const { node } = paragraph;
+    if (node.children[0].type === "image") {
+      const image = node.children[0];
+      return <Image src={image.url} alt={image.alt} width="400" height="400" />;
+    }
+
+    return <p>{paragraph.children}</p>;
+  },
+};
 
 export default function PostLayout(props) {
   return (
@@ -10,12 +28,11 @@ export default function PostLayout(props) {
       </Head>
       <article>
         <h1>{props.title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: props.content }} />
-        <div>
-          <Link href="/">
-            <a>Back home</a>
-          </Link>
-        </div>
+        <ReactMarkdown
+          className={markdownStyles["markdown"]}
+          children={props.content}
+          renderers={renderers}
+        />
       </article>
     </DefaultLayout>
   );

@@ -6,8 +6,18 @@ export default function Post(props) {
 }
 
 export async function getStaticProps(context) {
+  const props = await getPostBySlug(context.params.slug, [
+    "title",
+    "date",
+    "slug",
+    "author",
+    "content",
+    "ogImage",
+    "coverImage",
+  ]);
+
   return {
-    props: await getPostBySlug(context.params.slug),
+    props,
   };
 }
 

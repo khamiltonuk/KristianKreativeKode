@@ -18,15 +18,22 @@ export default function Blog(props) {
   return (
     <DefaultLayout title={props.title} description={props.description}>
       <ul>
-        {props.posts.map((post, idx) => (
-          <li key={idx}>
-            <Link href={"/posts/" + post.slug}>
-              <a>{post.title}</a>
-            </Link>
-            <p>{post.description}</p>
-            <p>{post.date}</p>
-          </li>
-        ))}
+        {props.posts.map((post, idx) => {
+          return (
+            <li key={idx}>
+              <Link href={"/posts/" + post.slug}>
+                <a>{post.title}</a>
+              </Link>
+              <p>{post.description}</p>
+              <p>{post.date}</p>
+              <p>
+                {post.tags.map((tag) => (
+                  <span>{tag.replace("-", " ")}</span>
+                ))}
+              </p>
+            </li>
+          );
+        })}
       </ul>
     </DefaultLayout>
   );

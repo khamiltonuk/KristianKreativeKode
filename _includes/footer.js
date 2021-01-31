@@ -1,6 +1,6 @@
-import Github from "../_assets/github.svg";
-import Linkedin from "../_assets/linkedin.svg";
-import Twitter from "../_assets/twitter.svg";
+import Github from "../public/github.svg";
+import Linkedin from "../public/linkedin.svg";
+import Twitter from "../public/twitter.svg";
 import Link from "next/link";
 
 export default function Footer() {

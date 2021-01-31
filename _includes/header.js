@@ -5,7 +5,7 @@ export default function Header() {
     <header>
       <Link href="/">
         <a>
-          <h1>Hi! I'm Kristian</h1>
+          <h1>khamilton.co.uk</h1>
         </a>
       </Link>
       <Link href="/about">

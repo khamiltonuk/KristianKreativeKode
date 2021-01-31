@@ -1,6 +1,7 @@
 ---
 title: "Welcome, my first post!"
 description: Not sure what I will post on this blog but here is a brief introduction.
+tag: personal
 date: 2021-01-20
 ---
 
