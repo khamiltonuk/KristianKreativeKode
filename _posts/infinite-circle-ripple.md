@@ -15,7 +15,7 @@ I recommend you don't copy and paste the code but try type it out, to help commi
 
 ![first ripple with no fill](/ripple-start.png)
 
-We will be use my favourite creative coding framework [p5.js](https://p5js.org/). When using P5.js I love using the [online editor](https://editor.p5js.org/) for the instant feedback. It also give us the basic setup to get going instantly, it should look like this, with grey background.
+We will be using my favourite creative coding framework [p5.js](https://p5js.org/). I love using the [online editor](https://editor.p5js.org/) for the instant feedback. It also give us the basic setup to get going instantly, it should look like this, with grey background.
 
 ```js
 function setup() {
@@ -33,7 +33,7 @@ function draw() {
 
 Lets start off by drawing a static circle in the middle of the screen.
 The [circle](https://p5js.org/reference/#/p5/circle) function from p5.js take three parameters, `x` position, `y` position and `radius`.
-While we are inside the draw function we have a few variables available to use, `height` and `width`, these give use the height and width of the canvas respectively. We can divided these values by two, to find the middle of the canvas. It may look like a static circle, but this draw function is being called every 60 per second, knowing this, we can leverage it to create animations.
+While we are inside the draw function we have a few certain variables available to use, e.g. `height` and `width`, these give use the height and width of the canvas respectively. We can divided these values by two, to find the middle of the canvas. It may currently look like a static circle, but this draw function is being called 60 times per second, knowing this, we can leverage it to create animations.
 
 ```js
 function setup() {
@@ -52,8 +52,9 @@ function draw() {
 
 We will need display lots of circles at once to generate this effect, we will use object oriented programming to do so.
 We will define an class called `Ring` it will accept three props, the `x` position, `y` position, and the circle `radius`.
-The `Ring` class will contain one method/function called `draw()` which we will call in the draw function.
-I would also like you to remove the white default fill of the circle by calling the [`noFill()`](https://p5js.org/reference/#/p5/noFill) function inside the draw function. The [`noFill()`](https://p5js.org/reference/#/p5/noFill) function is a function from p5.js which will remove the fill colour from any aliment leaving only the outline.
+This Class will be instantiated/used multiple times to make our multiple rings.
+The `Ring` class will contain one method/function called `draw()` which we will then call in the draw function.
+I would also like you to remove the white default fill of the circle by calling the [`noFill()`](https://p5js.org/reference/#/p5/noFill) function inside the draw function. The [`noFill()`](https://p5js.org/reference/#/p5/noFill) function is a function from p5.js which will remove the fill colour leaving only the outline.
 
 ```js
 function setup() {
@@ -84,8 +85,8 @@ class Ring {
 ### Multiple rings
 
 To store the multiple circles we use an Array called `rings`.
-Similar to `height` and `width`, there is another variable available in the draw function called [`frameCount`](https://p5js.org/reference/#/p5/frameCount). This is a number which starts at 0 when the the animation starts and increments by one every.
-We will divide the `frameCount` by 60, with the [remainder operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Remainder), therefore when there is no remainder we can assume a second has passed.
+Similar to `height` and `width`, there is another variable available in the draw function called [`frameCount`](https://p5js.org/reference/#/p5/frameCount). This is a number which starts at 0 when the the animation starts and increments by one time the draw function in executed.
+We will divide the `frameCount` by 60, and then check the outcome with the [remainder operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Remainder), therefore when there is no remainder we can assume a second has passed.
 We will loop the `rings` array, with a `forEach()` function, and call `draw()` on each ring in the array.
 
 ![ripple effect animation](/ripple-push.gif)
