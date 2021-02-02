@@ -1,6 +1,6 @@
 ---
 title: Too smart for your own good, converting is cheating
-description: I get a challenge from my friend to solve a problem in javascript.
+description: I got a challenge from my friend to solve a problem in javascript.
 tag: Javascript reduce
 date: 02/02/2021
 ---
