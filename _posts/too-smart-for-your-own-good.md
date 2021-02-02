@@ -24,7 +24,7 @@ console.log(concatNumbers(firstNumber, secondNumber)); // 10
 
 ![Roll safe actor Kayode Ewumi](/roll-safe.jpg)
 
-I said, "Do you want the return value a number or a string?"
+I asked, "Do you want the return value a number or a string?"
 
 He said, "no! but you shouldn't convert the type.
 Get the result using standard multiplication and addition."
