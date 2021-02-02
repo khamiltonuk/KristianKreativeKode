@@ -1,7 +1,7 @@
 ---
 title: Infinite circle ripple with p5.js
 description: Animating infinite circle ripples with the javascript library p5.js using es6 classes
-tag: creative-coding p5.js
+tag: creative-coding p5.js javascript
 date: 30/01/2021
 ---
 
