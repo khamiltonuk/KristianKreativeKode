@@ -2,7 +2,7 @@
 title: "Welcome, my first post!"
 description: Not sure what I will post on this blog but here is a brief introduction.
 tag: personal
-date: 2021-01-20
+date: 20/01/2021
 ---
 
 I don't like saying what I am good at, it makes me uncomfortable, I am aware this makes for a terrible salary negotiations, crippling modesty will prevent me from listing too many things but one thing I do think I am good at is mentoring/coaching, so much so I do it in my spare time, I actually enjoy it. I have been making websites with varying degrees of success for over a decade and I have learnt many things along the way which I am happy to share with others.

@@ -2,7 +2,7 @@
 title: A book review of Mask off - masculinity redefined By JJ Bola's
 description: The patriarchy protects and prioritises the rights of men over the rights of women
 tag: book-review
-date: 2021-01-24
+date: 24/01/2021
 ---
 
 ![photo of the book Mask off - By JJ Bola's](/mask-off-jj-bola.jpg)

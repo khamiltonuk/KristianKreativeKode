@@ -1,6 +1,6 @@
 import matter from "gray-matter";
 import yaml from "js-yaml";
-import { format } from "date-fns";
+import { format, compareAsc, parse } from "date-fns";
 
 export async function getAllPosts() {
   const context = require.context("../_posts", false, /\.md$/);
@@ -14,11 +14,19 @@ export async function getAllPosts() {
       slug: post.replace(".md", ""),
       title: meta.data.title,
       tags: meta.data.tag.split(" ") || [],
-      date: format(new Date(meta.data.date), "dd/MM/yyyy"),
+      date: meta.data.date,
       description: meta.data.description,
     });
   }
-  return posts;
+
+  const sortedPosts = posts.sort((a, b) => {
+    return compareAsc(
+      parse(b.date, "dd/MM/yyyy", new Date()),
+      parse(a.date, "dd/MM/yyyy", new Date())
+    );
+  });
+
+  return sortedPosts;
 }
 
 export async function getPostBySlug(slug) {
