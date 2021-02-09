@@ -9,13 +9,13 @@ Today we are going to make an infinitely looping, ripple effect similar to this.
 
 ![ripple effect animation](/ripple-final.gif)
 
-I recommend you don't copy and paste the code but try type it out, to help commit stuff to memory, but it will help with comprehension. I am aware this is a more accident prone approach but worth the effort.
+I recommend you don't copy and paste the code but try typing it out, to help commit stuff to memory, but it will help with comprehension. I am aware this is a more accident prone approach but worth the effort.
 
 ### The setup
 
 ![first ripple with no fill](/ripple-start.png)
 
-We will be using my favourite creative coding framework [p5.js](https://p5js.org/). I love using the [online editor](https://editor.p5js.org/) for the instant feedback. It also give us the basic setup to get going instantly, it should look like this, with grey background.
+We will be using my favourite creative coding framework [p5.js](https://p5js.org/). I love using the [online editor](https://editor.p5js.org/) for the instant feedback. It also gives us the basic setup to get going instantly, it should look like this, with a grey background.
 
 ```js
 function setup() {
@@ -31,9 +31,9 @@ function draw() {
 
 ![circle in the middle of the screen](/ripple-circle.png)
 
-Lets start off by drawing a static circle in the middle of the screen.
+Let's start by drawing a static circle in the middle of the screen.
 The [circle](https://p5js.org/reference/#/p5/circle) function from p5.js take three parameters, `x` position, `y` position and `radius`.
-While we are inside the draw function we have a few certain variables available to use, e.g. `height` and `width`, these give use the height and width of the canvas respectively. We can divided these values by two, to find the middle of the canvas. It may currently look like a static circle, but this draw function is being called 60 times per second, knowing this, we can leverage it to create animations.
+While we are inside the draw function we have a few certain variables available to use, e.g. `height` and `width`, these give use the height and width of the canvas respectively. We can divide these values by two, to find the middle of the canvas. It may currently look like a static circle, but this draw function is being called 60 times per second, knowing this, we can leverage it to create animations.
 
 ```js
 function setup() {
@@ -50,9 +50,9 @@ function draw() {
 
 ![first ripple with no fill](/ripple-nofill.png)
 
-We will need display lots of circles at once to generate this effect, we will use object oriented programming to do so.
-We will define an class called `Ring` it will accept three props, the `x` position, `y` position, and the circle `radius`.
-This Class will be instantiated/used multiple times to make our multiple rings.
+We will need to display lots of circles at once to generate this effect, we will use object oriented programming to do so.
+We will define a class called `Ring` it will accept three props, the `x` position, `y` position, and the circle `radius`.
+This class will be instantiated/used multiple times to make our multiple rings.
 The `Ring` class will contain one method/function called `draw()` which we will then call in the draw function.
 I would also like you to remove the white default fill of the circle by calling the [`noFill()`](https://p5js.org/reference/#/p5/noFill) function inside the draw function. The [`noFill()`](https://p5js.org/reference/#/p5/noFill) function is a function from p5.js which will remove the fill colour leaving only the outline.
 
@@ -85,7 +85,7 @@ class Ring {
 ### Multiple rings
 
 To store the multiple circles we use an Array called `rings`.
-Similar to `height` and `width`, there is another variable available in the draw function called [`frameCount`](https://p5js.org/reference/#/p5/frameCount). This is a number which starts at 0 when the the animation starts and increments by one time the draw function in executed.
+Similar to `height` and `width`, there is another variable available in the draw function called [`frameCount`](https://p5js.org/reference/#/p5/frameCount). This is a number which starts at 0 when the animation starts and increments by one each time the draw function is executed.
 We will divide the `frameCount` by 60, and then check the outcome with the [remainder operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Remainder), therefore when there is no remainder we can assume a second has passed.
 We will loop the `rings` array, with a `forEach()` function, and call `draw()` on each ring in the array.
 
@@ -129,7 +129,7 @@ class Ring {
 ### Growing the rings
 
 We now have, rings being drawn at specific sizes each second, but we want the rings to gradually grow in size as time passes.
-Therefore we will create an `update()` function which will increase radius by 1 each time the it is called.
+Therefore we will create an `update()` function which will increase the radius by 1 each time the it is called.
 
 ![ripple effect animation](/ripple-end.gif)
 
