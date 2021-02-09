@@ -3,7 +3,6 @@ import Head from "next/head";
 import ReactMarkdown from "react-markdown";
 import Image from "next/image";
 import Link from "next/link";
-import markdownStyles from "./markdown-styles.module.css";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 
 const renderers = {
@@ -30,7 +29,6 @@ export default function PostLayout(props) {
       <article>
         <h1>{props.title}</h1>
         <ReactMarkdown
-          className={markdownStyles["markdown"]}
           children={props.content}
           renderers={renderers}
         />
