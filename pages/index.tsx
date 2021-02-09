@@ -1,4 +1,4 @@
-import DefaultLayout from "@layouts/default";
+import DefaultLayout from "../_layouts/default";
 import Link from "next/link";
 import { getConfig, getAllPosts } from "@api";
 

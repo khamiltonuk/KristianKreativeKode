@@ -1,6 +1,6 @@
 import matter from "gray-matter";
 import yaml from "js-yaml";
-import { format, compareAsc, parse } from "date-fns";
+import { compareAsc, parse } from "date-fns";
 
 export async function getAllPosts() {
   const context = require.context("../_posts", false, /\.md$/);
@@ -29,7 +29,7 @@ export async function getAllPosts() {
   return sortedPosts;
 }
 
-export async function getPostBySlug(slug) {
+export async function getPostBySlug(slug: string) {
   const fileContent = await import(`../_posts/${slug}.md`);
   const meta = matter(fileContent.default);
   return {
