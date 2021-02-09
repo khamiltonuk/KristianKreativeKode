@@ -1,9 +1,11 @@
 ---
-title: We worked on the problem for 2 hours and we didn't fix the students problem
-description: My thoughts about codebar and the role of helping others.
+title: We worked on the problem for 2 hours and we didn't fix the problem
+description: My thoughts about codebar and the role of coaching others.
 tag: javascript codebar coaching
 date: 09/02/2021
 ---
+
+![photo from a workshop](/coaching.jpg)
 
 I have been coaching at codebar for 5 years, and despite the comfort this familiarity brings, it doesn't shield me from the disappointment of a workshop where myself and the student have made no notable progress in the codebase.
 This has happened to me multiple times, I will find my self disappointed at the end of a workshop because a student has come with a problem, and hasn't managed to solve it.
