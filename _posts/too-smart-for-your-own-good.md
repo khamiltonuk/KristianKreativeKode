@@ -34,7 +34,7 @@ Get the result using standard multiplication and addition."
 "Converting is cheating, it's like using a side effect of concatenating strings to do a calculation."
 
 I responded, "Sounds like something a back end developer would say,
-type coercion in javascript behaves consistently, but not a logical way.
+type coercion in javascript behaves consistently, but not in a logical way.
 and it's not a bad thing if you know what you are doing."
 
 I gave it a go...
