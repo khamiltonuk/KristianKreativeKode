@@ -48,4 +48,5 @@ In conclusion coaches at codebar are not there to solve student's problems, they
 
 ---
 
-My views are my own and don't represent the codebar organisation. If you are learning to code, and you a member of an under-represented group, I recommend you joining a codebar workshop sometime. If you are already a developer and you would like to improve your ability to mentor and coach I also encourage you to come along, sign up at [codebar.io](https://codebar.io/).
+My views are my own and don't represent the codebar organisation. If you are learning to code, and you a member of an under-represented group, I recommend you join a codebar workshop sometime.
+If you are already a developer and you would like to improve your ability to mentor and coach, I would also encourage you to come along, sign up at [codebar.io](https://codebar.io/).
