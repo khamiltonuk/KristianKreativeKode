@@ -1,6 +1,6 @@
 ---
-title: A book review of Total Recall: Deconstructing and spreading at the same time.
-description: Not bad but not good, I will explain the difference between deconstructing and spreading within function parameters 
+title: Deconstructing and spreading props at the same time.
+description: Not bad but not good, I will explain the difference between deconstructing and spreading within function parameters
 tag: javascript react es6 beginner
 date: 22/02/2021
 ---
