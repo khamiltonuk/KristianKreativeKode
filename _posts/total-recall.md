@@ -1,5 +1,5 @@
 ---
-title: A book review of Total Recall - My Unbelievably True Life Story by Arnold Schwarzenegger
+title: A book review of Total Recall My Unbelievably True Life Story by Arnold Schwarzenegger
 description: A good title and a good book
 tag: book-review
 date: 21/02/2021
