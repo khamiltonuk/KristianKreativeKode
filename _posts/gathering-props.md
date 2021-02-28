@@ -5,7 +5,7 @@ tag: javascript react es6 beginner
 date: 22/02/2021
 ---
 
-```
+```jsx
 const Header = function({...props}) => {
     return (<>
             <menu isOpen={props.isOpen} onClick={props.handleOnClick}>
