@@ -56,7 +56,7 @@ I am familiar with this, but it's always great to hear Ben talk as he's a good s
 
 Unfortunately, I had made evening plans, so I couldn't stay for the entire event.
 Thankfully it was all recorded, and the slides will be shared.
-I missed out on [Brian Douglas](https://twitter.com/bdougieYO), someone else I also already follow on twitter and enjoy his tweets.
+I missed out on the last talk from [Brian Douglas](https://twitter.com/bdougieYO).
 
 I would love to see this event flourish and become more popular; it would be cool if we ever all got to meet in person one day.
 I am curious about how we can facilitate networking at such an event, but maybe I missed the networking as I didn't stay till the end.
