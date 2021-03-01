@@ -88,7 +88,7 @@ The `<Navigation />` and `<Logo />` components have the `rest` object spread ont
 
 ### Was the initial example wrong?
 
-In the case of the initial example, it destructed the props object in the function parameter and gathered the props at the same time. It works, but is superfluous syntax and can cause confusion.
+In the case of the initial example, it destructed the props object in the function parameter and gathered the props at the same time. When accessing the props via the dot notation, it works but is superfluous syntax and can cause confusion.
 
 ```jsx
 const navigation = function({...props}) => {
