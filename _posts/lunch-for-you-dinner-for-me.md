@@ -29,7 +29,7 @@ Once again, in the zoom call, he looked dressed to go for a run.
 
 The event started with R'n'B music, an unconventional start to a tech event but very enjoyable. I found myself repeatedly googling song lyrics and adding them to a Spotify playlist. The music soon faded out, and the event began. There was a code of conduct at the start that was nice to hear and indicates the attendees were in good hands.
 
-![photo of a white board filled with post it notes](/pattern-audit.jpg.jpg)
+![photo of a white board filled with post it notes](/pattern-audit.jpg)
 
 The first talk was from [Adekunle Oduye](https://twitter.com/adekunleoduye) UX Engineer, Mailchimp.
 The talk had a good structure. It centred around a comparison between the reality TV show "The Profit's, host Marcus Lemonis three P's of business; people, process and product. Adekunle argued that these three P's also could be used as a strategy to build a successful design system. Adekunle spoke of his first experience building a design system, and described it as a failure. He gave examples of sound open-source design systems and spoke of his current work's success on a design system at Mailchimp. I took notes frantically as I am currently working on a design system at work which isn't going as well as I'd like.
@@ -47,7 +47,7 @@ This was by far the most engaging. Aaron pace was at points fast, but this was t
 
 ![slide from presentation](/wasm.jpg)
 
-Aaron briefly introduced us also to his project Wasmboy, which was a game boy and game boy color emulator written in, WebAssembly, his goal was to learn. Writing WebAssembly in its pure form is uncommon, and instead, you would choose another language to abstract away from the code. Aaron decided to use Assemblyscript, a typescript-like language. He is an experienced javascript developer who wanted to make something but didn't want to learn a whole new language. I am currently trying to learn typescript, and this could be a fun way to do so.
+Aaron briefly introduced us also to his project [Wasmboy](https://github.com/torch2424/wasmboy), which was a game boy and game boy color emulator written in, WebAssembly, his goal was to learn. Writing WebAssembly in its pure form is uncommon, and instead, you would choose another language to abstract away from the code. Aaron decided to use Assemblyscript, a typescript-like language. He is an experienced javascript developer who wanted to make something but didn't want to learn a whole new language. I am currently trying to learn typescript, and this could be a fun way to do so.
 
 [Ben Ilegbodu](https://twitter.com/benmvp), Principal FE Engineer, StitchFix
 Ben gave the fifth talk of the event. He is someone I already follow on Twitter.
