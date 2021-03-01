@@ -7,11 +7,11 @@ date: 22/02/2021
 
 ```jsx
 const Header = function({...props}) => {
-    return (<>
-            <menu isOpen={props.isOpen} onClick={props.handleOnClick}>
-            <Navigation location={props.location}>
-            <Logo isActive={props.isActive}>
-        </>)
+    return (<div>
+            <Menu isOpen={props.isOpen} onClick={props.handleOnClick} />
+            <Navigation location={props.location} />
+            <Logo isActive={props.isActive} />
+        </div>)
 }
 ```
 
@@ -19,7 +19,7 @@ I saw this in a friend's react code and wanted to explain what's going on and ho
 
 ### What are props?
 
-A react component receives an object generally referred to as `props`, which can contain multiple properties that have been passed from the parent component.
+A react component receives an object generally referred to as `props` a the first argument. This object can contain multiple properties that have been passed from the parent component.
 These values can be accessed using the dot notation e.g. `props.isOpen`.
 
 ```jsx
@@ -28,11 +28,11 @@ These values can be accessed using the dot notation e.g. `props.isOpen`.
 
 // header.js
 const Header = function(props) => {
-    return (<>
-            <menu isOpen={props.isOpen} onClick={props.handleOnClick}>
-            <Navigation location={props.location}>
-            <Logo isActive={props.isActive}>
-        </>)
+    return (<div>
+            <Menu isOpen={props.isOpen} onClick={props.handleOnClick} />
+            <Navigation location={props.location} />
+            <Logo isActive={props.isActive} />
+        </div>)
 }
 ```
 
@@ -43,11 +43,11 @@ To prevent the repetition of `props.` we can use [deconstruct assignment](https:
 ```jsx
 const Header = function(props) => {
     const {isOpen, location, isActive, handleOnClick} = props
-    return (<>
-            <menu isOpen={isOpen} onClick={handleOnClick}>
-            <Navigation location={location}>
-            <Logo isActive={isActive}>
-        </>)
+    return (<div>
+            <Menu isOpen={isOpen} onClick={handleOnClick} />
+            <Navigation location={location} />
+            <Logo isActive={isActive} />
+        </div>)
 }
 ```
 
@@ -57,11 +57,11 @@ We can also perform object destructuring assignment inside the function paramete
 
 ```jsx
 const Header = function({isOpen, location, isActive, handleOnClick}) => {
-    return (<>
-            <menu isOpen={isOpen} onClick={handleOnClick}>
-            <Navigation location={location}>
-            <Logo isActive={isActive}>
-        </>)
+    return (<div>
+            <Menu isOpen={isOpen} onClick={handleOnClick} />
+            <Navigation location={location} />
+            <Logo isActive={isActive} />
+        </div>)
 }
 ```
 
@@ -76,15 +76,13 @@ A common coding convention is to call the gathered props `rest`, but you can cal
 
 ```jsx
 const Header = function({isOpen, handleOnClick, ...rest }) => {
-    return (<>
-            <menu isOpen={isOpen} onClick={handleOnClick}>
-            <Navigation {...rest}>
-            <Logo {...rest}>
-        </>)
+    return (<div>
+            <Menu isOpen={isOpen} onClick={handleOnClick} />
+            <Navigation  />
+            <Logo />
+        </div>)
 }
 ```
-
-The `<Navigation />` and `<Logo />` components have the `rest` object spread onto it and will receive the two props the rest object contains `location` and `isActive`.
 
 ### Was the initial example wrong?
 
@@ -92,11 +90,11 @@ In the case of the initial example, it destructed the props object in the functi
 
 ```jsx
 const navigation = function({...props}) => {
-    return (<>
-            <menu isOpen={props.isOpen} onClick={props.handleOnClick}>
-            <Navigation location={props.location}>
-            <Logo isActive={isActive}>
-        </>)
+    return (<div>
+            <Menu isOpen={props.isOpen} onClick={props.handleOnClick} />
+            <Navigation location={props.location} />
+            <Logo isActive={isActive} />
+        </div>)
 }
 ```
 
