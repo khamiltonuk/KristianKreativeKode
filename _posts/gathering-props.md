@@ -38,7 +38,7 @@ const Header = function(props) => {
 
 ### What is destructuring assignment (Object destructuring)?
 
-To prevent the repetition of `props.` we can use [deconstruct assignment](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) that will assign each prop to a variable which we can then use in the components.
+To prevent the repetition of `props.` we can use [deconstruct assignment](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) that will assign each prop to a variable which we can then use in the component.
 
 ```jsx
 const Header = function(props) => {
@@ -68,9 +68,9 @@ const Header = function({isOpen, location, isActive, handleOnClick}) => {
 ### What is gathering props?
 
 When three dots are used in function parameters, this syntax is called [Rest parameters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters).
-When we use rest parameters inside the curly braces `...` we do something known as 'gathering props'.
+When we use rest parameters inside the curly braces we do something known as 'gathering props'.
 This will assign the non-deconstructed props to a new object.
-This is good for when we don't need certain props right now in the current component but want to pass them along to a child component by `spreading`.
+This is good for when we don't need certain props right now in the current component but want to pass them along to a child component by [spreading](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax).
 
 A common coding convention is to call the gathered props `rest`, but you can call them whatever you want.
 
@@ -84,7 +84,7 @@ const Header = function({isOpen, handleOnClick, ...rest }) => {
 }
 ```
 
-The `<Navigation />` and `<Logo />` components have the `rest` object spread onto it and will receive the two props it contains `location` and `isActive`.
+The `<Navigation />` and `<Logo />` components have the `rest` object spread onto it and will receive the two props the rest object contains `location` and `isActive`.
 
 ### Was the initial example wrong?
 
