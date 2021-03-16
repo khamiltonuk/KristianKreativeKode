@@ -6,7 +6,7 @@ date: 22/02/2021
 ---
 
 ```jsx
-const Header = function({...props}) => {
+const Header = ({...props}) => {
     return (<div>
             <Menu isOpen={props.isOpen} onClick={props.handleOnClick} />
             <Navigation location={props.location} />
@@ -27,7 +27,7 @@ These values can be accessed using the dot notation e.g. `props.isOpen`.
  <Header isOpen={isHeaderOpen} handleOnClick={() => setIsHeaderOpen(true)} isActive={isLogoActive} location={location}>
 
 // header.js
-const Header = function(props) => {
+const Header = (props) => {
     return (<div>
             <Menu isOpen={props.isOpen} onClick={props.handleOnClick} />
             <Navigation location={props.location} />
@@ -41,7 +41,7 @@ const Header = function(props) => {
 To prevent the repetition of `props.` we can use [deconstruct assignment](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) that will assign each prop to a variable which we can then use in the component.
 
 ```jsx
-const Header = function(props) => {
+const Header = (props) => {
     const {isOpen, location, isActive, handleOnClick} = props
     return (<div>
             <Menu isOpen={isOpen} onClick={handleOnClick} />
@@ -56,7 +56,7 @@ const Header = function(props) => {
 We can also perform object destructuring assignment inside the function parameters, saving us a line of code.
 
 ```jsx
-const Header = function({isOpen, location, isActive, handleOnClick}) => {
+const Header = ({isOpen, location, isActive, handleOnClick}) => {
     return (<div>
             <Menu isOpen={isOpen} onClick={handleOnClick} />
             <Navigation location={location} />
@@ -75,7 +75,7 @@ This is good for when we don't need certain props right now in the current compo
 A common coding convention is to call the gathered props `rest`, but you can call them whatever you want.
 
 ```jsx
-const Header = function({isOpen, handleOnClick, ...rest }) => {
+const Header = ({isOpen, handleOnClick, ...rest }) => {
     return (<div>
             <Menu isOpen={isOpen} onClick={handleOnClick} />
             <Navigation  />
@@ -86,10 +86,10 @@ const Header = function({isOpen, handleOnClick, ...rest }) => {
 
 ### Was the initial example wrong?
 
-In the case of the initial example, it destructed the props object in the function parameter and gathered the props at the same time. When accessing the props via the dot notation, it works but is superfluous syntax and can cause confusion.
+In the case of the initial example, it destructured the props object in the function parameter and gathered the props at the same time. When accessing the props via the dot notation, it works but is superfluous syntax and can cause confusion.
 
 ```jsx
-const navigation = function({...props}) => {
+const navigation = ({...props}) => {
     return (<div>
             <Menu isOpen={props.isOpen} onClick={props.handleOnClick} />
             <Navigation location={props.location} />
